@@ -1,0 +1,103 @@
+﻿@model NovoProjetoFrutas.Model.Produto
+
+
+@{
+    ViewData["Title"] = "Editar Produto";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center">
+
+    <h2 class="my-4">Editar Produto</h2>
+    <form asp-action="Edit">
+        <div class="form-horizontal">
+
+            <hr />
+
+            <!-- Validação -->
+            <div class="text-danger">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Campo Id oculto -->
+            <input type="hidden" name="Id" value="@Model.Id" />
+
+            <!-- Campo Código -->
+            <div class="mb-3">
+                <label for="Cod" class="form-label">Código</label>
+                <input id="Cod" name="Cod" class="form-control" value="@Model.Cod" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Cod)</span>
+            </div>
+
+            <!-- Campo Código do Item -->
+            <div class="mb-3">
+                <label for="CodItem" class="form-label">Código do Item</label>
+                <input id="CodItem" name="CodItem" class="form-control" value="@Model.CodItem" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.CodItem)</span>
+            </div>
+
+            <!-- Campo Nome -->
+            <div class="mb-3">
+                <label for="Nome" class="form-label">Nome</label>
+                <input id="Nome" name="Nome" class="form-control" value="@Model.Nome" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Nome)</span>
+            </div>
+
+            <!-- Campo Preço -->
+            <div class="mb-3">
+                <label for="Preco" class="form-label">Preço</label>
+                <input id="Preco" name="Preco" class="form-control" value="@Model.Preco" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Preco)</span>
+            </div>
+
+            <!-- Campo Preço Promocional -->
+            <div class="mb-3">
+                <label for="PrecoPromo" class="form-label">Preço Promocional</label>
+                <input id="PrecoPromo" name="PrecoPromo" class="form-control" value="@Model.PrecoPromo" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.PrecoPromo)</span>
+            </div>
+
+            <!-- Campo Grupo -->
+            <div class="mb-3">
+                <label for="Grupo" class="form-label">Grupo</label>
+                <input id="Grupo" name="Grupo" class="form-control" value="@Model.Grupo" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Grupo)</span>
+            </div>
+
+            <!-- Campo Estoque Disponível -->
+            <div class="mb-3">
+                <label for="EstoqueDisponivel" class="form-label">Estoque Disponível</label>
+                <input id="EstoqueDisponivel" name="EstoqueDisponivel" class="form-control" value="@Model.EstoqueDisponivel" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.EstoqueDisponivel)</span>
+            </div>
+
+            <!-- Campo Link -->
+            <div class="mb-3">
+                <label for="Link" class="form-label">Link</label>
+                <input id="Link" name="Link" class="form-control" value="@Model.Link" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Link)</span>
+            </div>
+
+            <!-- Campo Imagem -->
+            <div class="mb-3">
+                <label for="Imagem" class="form-label">Imagem</label>
+                <input id="Imagem" name="Imagem" class="form-control" value="@Model.Imagem" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Imagem)</span>
+            </div>
+
+            <!-- Botão de Salvar -->
+            <div class="d-flex justify-content-between">
+                <input type="submit" value="Save" class="btn btn-primary" />|
+                <a asp-action="Index" class="btn btn-secondary">Retorna</a>
+            </div>
+        </div>
+    </form>
+
+  
+
+
+</div>
+
+

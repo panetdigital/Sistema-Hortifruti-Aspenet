@@ -1,0 +1,40 @@
+Dificuldade
+
+Na hora da criar migracao se for o caso de apagar tabela gerada errada, 
+usar comando remove nome da tabela
+###############################
+
+Na hora de criar Novo projeto tipo de conexion usando com sql-server colocar windo individualno inicio  para ele gerar 
+AppDbContext automatica e As role, login
+
+###############################
+
+Na hora de colocar string da conection colocar true pra ele acessar:TrustServerCertificate=True;"
+"ConnectionStrings": {
+  "DefaultConnection": "Server=DESKTOP-O1CUOJC\\SQLEXPRESS;
+  Database=SistemaFrutas;
+  Trusted_Connection=True;
+  MultipleActiveResultSets=true;
+  TrustServerCertificate=True;"
+},
+
+##############################
+Para funcionar links de asp-controller="Produtos" asp-action="Index"
+
+configurar no Programa.cs 
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Produtos}/{action=Index}/{id?}");
+app.MapRazorPages();
+
+Criar pasta shared dentro Views/_Layout.cshtml e viewport, viewstart
+Se nao vai funcionar
+
+#######################################################
+para Link de Edit(Produtos/Edit/1) funcionar deve colocar
+ na form de enviou <form asp-action="Edit">

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<NovoProjetoFrutas.Model.Produto>
+
+
+@{
+    ViewData["Title"] = "Listagem de Produtos";
+}
+
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="/Produtos/Create" class="btn btn-primary">Criar Novo</a>
+    </div>
+
+    <h1 class="display-4">Lista de Produtos</h1>
+
+
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.CodItem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    Preço
+                </th>
+                <th>
+                    Categória
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodItem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Grupo)
+                    </td>
+                    <td>
+                        <a href="/Produtos/Edit/@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="/Produtos/Details/@item.Id" class="btn btn-sm btn-info">Details</a>
+                        <a href="/Produtos/Delete/@item.Id" class="btn btn-sm btn-danger">Delete</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

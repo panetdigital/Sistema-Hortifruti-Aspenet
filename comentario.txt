@@ -2,6 +2,7 @@ Dificuldade
 
 Na hora da criar migracao se for o caso de apagar tabela gerada errada, 
 usar comando remove nome da tabela
+Remove-Migration
 ###############################
 
 Na hora de criar Novo projeto tipo de conexion usando com sql-server colocar windo individualno inicio  para ele gerar 

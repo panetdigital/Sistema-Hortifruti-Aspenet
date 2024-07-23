@@ -25,9 +25,7 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Produtos" asp-action="Index">Produtos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
+                      
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -37,10 +35,10 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
-            <p>Hello, world! The time on the server is @DateTime.Now</p>
+            
 
             <h1>Bem-vindo ao Sistema HortiFruti</h1>
-            <p>Esta é a página inicial.</p>
+            <p>Esta é a página Administrava.</p>
             <p>
                 <a class="btn btn-primary" asp-controller="Produtos" asp-action="Index">Ver Produtos</a>
             </p>

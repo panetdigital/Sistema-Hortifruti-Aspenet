@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovoProjetoFrutas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87eb454cef0e9b44c92dc3b9830c9724121f2c8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovoProjetoFrutas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovoProjetoFrutas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
